@@ -205,6 +205,72 @@
             background: #7e22ce;
             color: white;
         }
+
+        /* Tier badges */
+        .tier-badge {
+            display: inline-block;
+            padding: 6px 12px;
+            border-radius: 8px;
+            font-size: 0.9em;
+            font-weight: 700;
+            text-align: center;
+            min-width: 40px;
+        }
+        .tier-S { background: linear-gradient(135deg, #ffd700 0%, #ffed4e 100%); color: #333; }
+        .tier-A { background: linear-gradient(135deg, #c0c0c0 0%, #e8e8e8 100%); color: #333; }
+        .tier-B { background: linear-gradient(135deg, #cd7f32 0%, #daa520 100%); color: white; }
+        .tier-C { background: linear-gradient(135deg, #3b82f6 0%, #60a5fa 100%); color: white; }
+        .tier-D { background: linear-gradient(135deg, #6b7280 0%, #9ca3af 100%); color: white; }
+
+        /* Difficulty badges */
+        .difficulty-easy { background: #dcfce7; color: #166534; border-left: 4px solid #22c55e; }
+        .difficulty-medium { background: #fef9c3; color: #854d0e; border-left: 4px solid #eab308; }
+        .difficulty-hard { background: #fee2e2; color: #991b1b; border-left: 4px solid #ef4444; }
+
+        /* Score breakdown */
+        .score-breakdown {
+            display: flex;
+            gap: 10px;
+            flex-wrap: wrap;
+            margin-top: 8px;
+            font-size: 0.85em;
+        }
+        .score-item {
+            background: #f3f4f6;
+            padding: 4px 8px;
+            border-radius: 6px;
+            white-space: nowrap;
+        }
+
+        /* Matchup cards */
+        .matchup-card {
+            background: #f9fafb;
+            border-radius: 12px;
+            padding: 20px;
+            margin-bottom: 15px;
+            border-left: 4px solid #7e22ce;
+        }
+        .matchup-header {
+            font-size: 1.2em;
+            font-weight: 700;
+            color: #7e22ce;
+            margin-bottom: 12px;
+        }
+        .matchup-teams {
+            display: flex;
+            align-items: center;
+            justify-content: space-between;
+            gap: 15px;
+        }
+        .matchup-team {
+            flex: 1;
+            text-align: center;
+        }
+        .matchup-vs {
+            font-weight: 700;
+            color: #7e22ce;
+            font-size: 1.2em;
+        }
         
         /* 手機版優化 */
         @media (max-width: 768px) {
@@ -294,6 +360,14 @@
                 padding: 3px 8px;
                 font-size: 0.75em;
             }
+
+            /* Mobile optimizations for new tables */
+            .tier-badge { padding: 4px 8px; font-size: 0.8em; }
+            .score-breakdown { font-size: 0.75em; }
+            .matchup-card { padding: 15px; }
+            .matchup-header { font-size: 1em; }
+            .matchup-teams { flex-direction: column; gap: 10px; }
+            .matchup-vs { margin: 10px 0; }
         }
     </style>
 </head>
@@ -313,6 +387,9 @@
                 <button class="tab" onclick="showTab('roster')">球員陣容</button>
                 <button class="tab" onclick="showTab('stats')">球隊統計</button>
                 <button class="tab" onclick="showTab('info')">聯盟資訊</button>
+                <button class="tab" onclick="showTab('trade-value')">進階交易價值</button>
+                <button class="tab" onclick="showTab('schedule-analysis')">賽程分析</button>
+                <button class="tab" onclick="showTab('weekly-report')">每週戰報</button>
             </div>
             <div class="scroll-indicator">→</div>
         </div>
@@ -360,10 +437,37 @@
         <div id="info-tab" class="tab-content">
             <div class="card"><div id="info-content"><div class="loading">載入聯盟資訊</div></div></div>
         </div>
+
+        <div id="trade-value-tab" class="tab-content">
+            <div class="card">
+                <div class="selector">
+                    <label for="tier-select">篩選等級：</label>
+                    <select id="tier-select" onchange="loadTradeValue()">
+                        <option value="">全部顯示</option>
+                        <option value="S">S 級</option>
+                        <option value="A">A 級</option>
+                        <option value="B">B 級</option>
+                        <option value="C">C 級</option>
+                        <option value="D">D 級</option>
+                    </select>
+                </div>
+                <div id="trade-value-content"><div class="loading">載入交易價值數據</div></div>
+            </div>
+        </div>
+
+        <div id="schedule-analysis-tab" class="tab-content">
+            <div class="card"><div id="schedule-analysis-content"><div class="loading">載入賽程分析數據</div></div></div>
+        </div>
+
+        <div id="weekly-report-tab" class="tab-content">
+            <div class="card"><div id="weekly-report-content"><div class="loading">載入每週戰報數據</div></div></div>
+        </div>
     </div>
 
     <script>
         let leagueData = null;
+        let tradeValueData = null;
+        let leagueInsightsData = null;
         
         // 檢查是否為手機
         function isMobile() {
@@ -387,13 +491,33 @@
         
         async function loadData() {
             try {
+                // Load main league data
                 try {
                     const response = await fetch('/api/league-data');
                     const result = await response.json();
-                    if (result.success) { leagueData = result.data; initializeApp(); return; }
-                } catch (e) { console.log('API fail, try local:', e); }
-                const response = await fetch('data/full_league_data.json');
-                leagueData = await response.json();
+                    if (result.success) { leagueData = result.data; }
+                } catch (e) {
+                    console.log('API fail, try local:', e);
+                    const response = await fetch('data/full_league_data.json');
+                    leagueData = await response.json();
+                }
+
+                // Load trade value data
+                try {
+                    const tradeResponse = await fetch('data/advanced_trade_value.json');
+                    tradeValueData = await tradeResponse.json();
+                } catch (e) {
+                    console.error('Failed to load trade value data:', e);
+                }
+
+                // Load league insights data
+                try {
+                    const insightsResponse = await fetch('data/league_insights.json');
+                    leagueInsightsData = await insightsResponse.json();
+                } catch (e) {
+                    console.error('Failed to load league insights data:', e);
+                }
+
                 initializeApp();
             } catch (error) {
                 console.error('載入失敗:', error);
@@ -542,12 +666,225 @@
             const content = document.getElementById('info-content');
             content.innerHTML = `<h2 style="margin-bottom: 20px; color: #7e22ce;">聯盟資訊</h2><div class="stats-grid"><div class="stat-item"><div class="stat-label">聯盟名稱</div><div class="stat-value" style="font-size: 1.5em;">${leagueData.league_name}</div></div><div class="stat-item"><div class="stat-label">聯盟 ID</div><div class="stat-value" style="font-size: 1.3em;">${leagueData.league_id}</div></div><div class="stat-item"><div class="stat-label">隊伍數量</div><div class="stat-value">${leagueData.num_teams}</div></div><div class="stat-item"><div class="stat-label">當前週次</div><div class="stat-value">Week ${leagueData.current_week}</div></div><div class="stat-item"><div class="stat-label">賽季</div><div class="stat-value">${leagueData.season}</div></div><div class="stat-item"><div class="stat-label">賽季總週數</div><div class="stat-value">${leagueData.total_weeks}</div></div></div>`;
         }
+
+        function loadTradeValue() {
+            const content = document.getElementById('trade-value-content');
+            if (!tradeValueData) {
+                content.innerHTML = '<div class="loading">無法載入交易價值數據</div>';
+                return;
+            }
+
+            const selectedTier = document.getElementById('tier-select').value;
+            let players = tradeValueData.players || [];
+
+            // Filter by tier if selected
+            if (selectedTier) {
+                players = players.filter(p => p.tier === selectedTier);
+            }
+
+            // Sort by total score descending
+            players.sort((a, b) => (b.scores?.total || 0) - (a.scores?.total || 0));
+
+            // Show top 20 if no tier selected
+            if (!selectedTier) {
+                players = players.slice(0, 20);
+            }
+
+            let html = `<h2 style="margin-bottom: 20px; color: #7e22ce;">進階交易價值分析</h2>`;
+
+            // Summary stats
+            if (tradeValueData.tier_distribution) {
+                html += `<div class="stats-grid" style="margin-bottom: 20px;">`;
+                for (const [tier, count] of Object.entries(tradeValueData.tier_distribution)) {
+                    html += `<div class="stat-item"><div class="stat-label">${tier} 級球員</div><div class="stat-value">${count}</div></div>`;
+                }
+                html += `</div>`;
+            }
+
+            if (players.length === 0) {
+                content.innerHTML = html + '<p style="text-align: center; color: #6b7280;">沒有符合條件的球員</p>';
+                return;
+            }
+
+            html += `<table><thead><tr><th>排名</th><th>球員</th><th>NBA隊伍</th><th>位置</th><th>幻想隊伍</th><th>等級</th><th>總分</th><th>詳細得分</th></tr></thead><tbody>`;
+
+            players.forEach((player, index) => {
+                const positions = player.positions?.join(', ') || '-';
+                const scores = player.scores || {};
+                const breakdown = `
+                    <div class="score-breakdown">
+                        <span class="score-item">位置: ${scores.position_value?.toFixed(1) || 0}</span>
+                        <span class="score-item">健康: ${scores.health_value?.toFixed(1) || 0}</span>
+                        <span class="score-item">隊伍: ${scores.team_strength?.toFixed(1) || 0}</span>
+                        <span class="score-item">特殊: ${scores.special_bonus?.toFixed(1) || 0}</span>
+                    </div>
+                `;
+
+                html += `
+                    <tr>
+                        <td><strong>${index + 1}</strong></td>
+                        <td><strong>${player.player_name}</strong></td>
+                        <td>${player.nba_team || '-'}</td>
+                        <td>${positions}</td>
+                        <td>${player.fantasy_team || '-'}</td>
+                        <td><span class="tier-badge tier-${player.tier}">${player.tier}</span></td>
+                        <td><strong>${scores.total?.toFixed(1) || 0}</strong></td>
+                        <td>${breakdown}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            content.innerHTML = html;
+        }
+
+        function loadScheduleAnalysis() {
+            const content = document.getElementById('schedule-analysis-content');
+            if (!leagueInsightsData || !leagueInsightsData.insights?.schedule_difficulty) {
+                content.innerHTML = '<div class="loading">無法載入賽程分析數據</div>';
+                return;
+            }
+
+            const scheduleData = leagueInsightsData.insights.schedule_difficulty;
+
+            let html = `<h2 style="margin-bottom: 20px; color: #7e22ce;">賽程難度分析</h2>`;
+            html += `<table><thead><tr><th>排名</th><th>隊伍</th><th>難度</th><th>平均對手勝率</th><th>未來4場對手</th></tr></thead><tbody>`;
+
+            scheduleData.forEach((team, index) => {
+                const difficultyClass =
+                    team.difficulty_level === '困難' ? 'difficulty-hard' :
+                    team.difficulty_level === '簡單' ? 'difficulty-easy' : 'difficulty-medium';
+
+                const opponents = team.future_opponents?.slice(0, 4) || [];
+                const opponentsHtml = opponents.map(opp =>
+                    `<div style="margin: 4px 0;">
+                        Week ${opp.week}: ${opp.opponent} (${(opp.win_rate * 100).toFixed(0)}%)
+                    </div>`
+                ).join('');
+
+                html += `
+                    <tr>
+                        <td><strong>${index + 1}</strong></td>
+                        <td><strong>${team.team_name}</strong></td>
+                        <td>
+                            <div class="stat-item ${difficultyClass}" style="display: inline-block;">
+                                ${team.emoji} ${team.difficulty_level}
+                            </div>
+                        </td>
+                        <td>${(team.avg_opponent_strength * 100).toFixed(1)}%</td>
+                        <td style="font-size: 0.9em;">${opponentsHtml}</td>
+                    </tr>
+                `;
+            });
+
+            html += '</tbody></table>';
+            content.innerHTML = html;
+        }
+
+        function loadWeeklyReport() {
+            const content = document.getElementById('weekly-report-content');
+            if (!leagueInsightsData || !leagueInsightsData.insights?.weekly_report) {
+                content.innerHTML = '<div class="loading">無法載入每週戰報數據</div>';
+                return;
+            }
+
+            const report = leagueInsightsData.insights.weekly_report;
+
+            let html = `<h2 style="margin-bottom: 20px; color: #7e22ce;">Week ${report.current_week} 戰報</h2>`;
+
+            // Current week info
+            html += `<div class="stats-grid" style="margin-bottom: 25px;">
+                <div class="stat-item"><div class="stat-label">當前週次</div><div class="stat-value">Week ${report.current_week}</div></div>
+                <div class="stat-item"><div class="stat-label">對戰場次</div><div class="stat-value">${report.total_matchups}</div></div>
+            </div>`;
+
+            // Top matchup
+            if (report.top_matchup) {
+                const top = report.top_matchup;
+                html += `
+                    <div class="matchup-card" style="border-left-color: #ffd700;">
+                        <div class="matchup-header">強強對決</div>
+                        <div class="matchup-teams">
+                            <div class="matchup-team">
+                                <div style="font-weight: 700; font-size: 1.1em;">${top.team1}</div>
+                                <div style="color: #6b7280; font-size: 0.9em;">勝率: ${(top.team1_wr * 100).toFixed(0)}%</div>
+                            </div>
+                            <div class="matchup-vs">VS</div>
+                            <div class="matchup-team">
+                                <div style="font-weight: 700; font-size: 1.1em;">${top.team2}</div>
+                                <div style="color: #6b7280; font-size: 0.9em;">勝率: ${(top.team2_wr * 100).toFixed(0)}%</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 12px; color: #7e22ce; font-weight: 600;">
+                            ${top.matchup_type}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // Bottom matchup
+            if (report.bottom_matchup) {
+                const bottom = report.bottom_matchup;
+                html += `
+                    <div class="matchup-card" style="border-left-color: #9ca3af;">
+                        <div class="matchup-header">勢均力敵</div>
+                        <div class="matchup-teams">
+                            <div class="matchup-team">
+                                <div style="font-weight: 700; font-size: 1.1em;">${bottom.team1}</div>
+                                <div style="color: #6b7280; font-size: 0.9em;">勝率: ${(bottom.team1_wr * 100).toFixed(0)}%</div>
+                            </div>
+                            <div class="matchup-vs">VS</div>
+                            <div class="matchup-team">
+                                <div style="font-weight: 700; font-size: 1.1em;">${bottom.team2}</div>
+                                <div style="color: #6b7280; font-size: 0.9em;">勝率: ${(bottom.team2_wr * 100).toFixed(0)}%</div>
+                            </div>
+                        </div>
+                        <div style="text-align: center; margin-top: 12px; color: #7e22ce; font-weight: 600;">
+                            ${bottom.matchup_type}
+                        </div>
+                    </div>
+                `;
+            }
+
+            // All matchups summary
+            if (report.all_matchups && report.all_matchups.length > 0) {
+                html += `<h3 style="margin: 30px 0 15px; color: #7e22ce;">本週所有對戰</h3>`;
+                html += `<table><thead><tr><th>場次</th><th>隊伍 A</th><th>勝率</th><th></th><th>隊伍 B</th><th>勝率</th><th>類型</th></tr></thead><tbody>`;
+
+                report.all_matchups.forEach((matchup, index) => {
+                    html += `
+                        <tr>
+                            <td><strong>#${index + 1}</strong></td>
+                            <td><strong>${matchup.team1}</strong></td>
+                            <td>${(matchup.team1_wr * 100).toFixed(0)}%</td>
+                            <td style="text-align: center; color: #7e22ce; font-weight: bold;">VS</td>
+                            <td><strong>${matchup.team2}</strong></td>
+                            <td>${(matchup.team2_wr * 100).toFixed(0)}%</td>
+                            <td>${matchup.matchup_type}</td>
+                        </tr>
+                    `;
+                });
+
+                html += '</tbody></table>';
+            }
+
+            content.innerHTML = html;
+        }
         
         function showTab(tabName) {
             document.querySelectorAll('.tab-content').forEach(tab => tab.classList.remove('active'));
             document.querySelectorAll('.tab').forEach(tab => tab.classList.remove('active'));
             document.getElementById(`${tabName}-tab`).classList.add('active');
             event.target.classList.add('active');
+
+            // Load data for new tabs when first clicked
+            if (tabName === 'trade-value' && tradeValueData) {
+                loadTradeValue();
+            } else if (tabName === 'schedule-analysis' && leagueInsightsData) {
+                loadScheduleAnalysis();
+            } else if (tabName === 'weekly-report' && leagueInsightsData) {
+                loadWeeklyReport();
+            }
         }
         
         window.onload = loadData;
