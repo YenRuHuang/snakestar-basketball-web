@@ -2883,15 +2883,14 @@
         "team": "SAC"
       },
       {
-        "player_id": 5843,
-        "name": "Josh Hart",
+        "player_id": 6548,
+        "name": "Josh Giddey",
         "positions": [
-          "SG",
-          "SF",
-          "PF"
+          "PG",
+          "SG"
         ],
-        "status": "INJ",
-        "team": "NYK"
+        "status": "",
+        "team": "CHI"
       },
       {
         "player_id": 6216,
@@ -2962,14 +2961,25 @@
         "team": "MIA"
       },
       {
-        "player_id": 6548,
-        "name": "Josh Giddey",
+        "player_id": 10118,
+        "name": "Cam Whitmore",
         "positions": [
-          "PG",
-          "SG"
+          "SF",
+          "PF"
         ],
         "status": "",
-        "team": "CHI"
+        "team": "WAS"
+      },
+      {
+        "player_id": 5843,
+        "name": "Josh Hart",
+        "positions": [
+          "SG",
+          "SF",
+          "PF"
+        ],
+        "status": "INJ",
+        "team": "NYK"
       },
       {
         "player_id": 5295,
@@ -2980,16 +2990,6 @@
         ],
         "status": "GTD",
         "team": "DEN"
-      },
-      {
-        "player_id": 10118,
-        "name": "Cam Whitmore",
-        "positions": [
-          "SF",
-          "PF"
-        ],
-        "status": "",
-        "team": "WAS"
       },
       {
         "player_id": 6400,
@@ -3823,7 +3823,7 @@
         "positions": [
           "PG"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "ORL"
       },
       {
@@ -3878,23 +3878,22 @@
         "team": "LAC"
       },
       {
-        "player_id": 5638,
-        "name": "Jamal Murray",
+        "player_id": 10467,
+        "name": "Dylan Harper",
         "positions": [
-          "PG",
           "SG"
         ],
-        "status": "GTD",
-        "team": "DEN"
+        "status": "",
+        "team": "SAS"
       },
       {
-        "player_id": 4612,
-        "name": "Stephen Curry",
+        "player_id": 10445,
+        "name": "Egor Dëmin",
         "positions": [
           "PG"
         ],
         "status": "",
-        "team": "GSW"
+        "team": "BKN"
       },
       {
         "player_id": 6023,
@@ -3936,42 +3935,13 @@
         "team": "PHX"
       },
       {
-        "player_id": 10287,
-        "name": "Zach Edey",
+        "player_id": 6733,
+        "name": "Moussa Diabaté",
         "positions": [
           "C"
         ],
-        "status": "INJ",
-        "team": "MEM"
-      },
-      {
-        "player_id": 5767,
-        "name": "De'Aaron Fox",
-        "positions": [
-          "PG",
-          "SG"
-        ],
-        "status": "INJ",
-        "team": "SAS"
-      },
-      {
-        "player_id": 6167,
-        "name": "Darius Garland",
-        "positions": [
-          "PG"
-        ],
-        "status": "INJ",
-        "team": "CLE"
-      },
-      {
-        "player_id": 10099,
-        "name": "Bilal Coulibaly",
-        "positions": [
-          "SG",
-          "SF"
-        ],
-        "status": "INJ",
-        "team": "WAS"
+        "status": "",
+        "team": "CHA"
       },
       {
         "player_id": 10110,
@@ -3991,6 +3961,73 @@
         ],
         "status": "",
         "team": "MIA"
+      },
+      {
+        "player_id": 5638,
+        "name": "Jamal Murray",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "status": "GTD",
+        "team": "DEN"
+      },
+      {
+        "player_id": 4612,
+        "name": "Stephen Curry",
+        "positions": [
+          "PG"
+        ],
+        "status": "",
+        "team": "GSW"
+      },
+      {
+        "player_id": 5647,
+        "name": "Guerschon Yabusele",
+        "positions": [
+          "PF",
+          "C"
+        ],
+        "status": "",
+        "team": "NYK"
+      },
+      {
+        "player_id": 10099,
+        "name": "Bilal Coulibaly",
+        "positions": [
+          "SG",
+          "SF"
+        ],
+        "status": "INJ",
+        "team": "WAS"
+      },
+      {
+        "player_id": 5767,
+        "name": "De'Aaron Fox",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "status": "INJ",
+        "team": "SAS"
+      },
+      {
+        "player_id": 10287,
+        "name": "Zach Edey",
+        "positions": [
+          "C"
+        ],
+        "status": "INJ",
+        "team": "MEM"
+      },
+      {
+        "player_id": 6167,
+        "name": "Darius Garland",
+        "positions": [
+          "PG"
+        ],
+        "status": "INJ",
+        "team": "CLE"
       }
     ],
     "14": [
@@ -4124,5 +4161,5 @@
       }
     ]
   },
-  "last_updated": "2025-10-22 16:15:00"
+  "last_updated": "2025-10-23 00:05:52"
 }
