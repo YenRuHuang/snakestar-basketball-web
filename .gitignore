@@ -1,4 +1,42 @@
-node_modules/
+# 機密文件
+config/google_service_account.json
+config/token.json
+config/credentials.json
+
+# 數據文件（選擇性忽略）
+# data/*.json
+
+# Logs
+logs/
 *.log
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.pyd
+.Python
+*.egg-info/
+dist/
+build/
+
+# Node
+node_modules/
+
+# macOS
 .DS_Store
+.AppleDouble
+.LSOverride
+
+# 編輯器
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# 環境變數
 .env
+
+# Web submodule (separate repo)
+web/
