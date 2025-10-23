@@ -1,5 +1,5 @@
 {
-  "generated_at": "2025-10-22 18:35:40",
+  "generated_at": "2025-10-23 12:32:20",
   "league_name": "蛇星刁手",
   "current_week": 1,
   "total_weeks": 23,
@@ -458,12 +458,12 @@
       {
         "team_name": "Benig",
         "team_id": "3",
-        "total_players": 14,
+        "total_players": 15,
         "positions": {
           "PG": 4,
           "SG": 6,
-          "SF": 7,
-          "PF": 4,
+          "SF": 8,
+          "PF": 5,
           "C": 3
         },
         "strongest_position": "SF",
@@ -486,13 +486,13 @@
       {
         "team_name": "Eugene's Excellent Team",
         "team_id": "5",
-        "total_players": 14,
+        "total_players": 15,
         "positions": {
           "PG": 4,
           "SG": 6,
           "SF": 6,
           "PF": 8,
-          "C": 4
+          "C": 5
         },
         "strongest_position": "PF",
         "weakest_position": "PG"
@@ -598,13 +598,13 @@
       {
         "team_name": "焦糖's Wonderful Team",
         "team_id": "13",
-        "total_players": 13,
+        "total_players": 17,
         "positions": {
-          "PG": 5,
-          "SG": 5,
+          "PG": 6,
+          "SG": 6,
           "SF": 5,
-          "PF": 4,
-          "C": 2
+          "PF": 5,
+          "C": 4
         },
         "strongest_position": "PG",
         "weakest_position": "C"
@@ -837,11 +837,37 @@
         "trade_value": 70
       },
       {
+        "player_name": "OG Anunoby",
+        "team_name": "洋基工程",
+        "positions": [
+          "SF",
+          "PF"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
         "player_name": "Jaren Jackson Jr.",
         "team_name": "洋基工程",
         "positions": [
           "PF",
           "C"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
+        "player_name": "Jaylen Brown",
+        "team_name": "洋基工程",
+        "positions": [
+          "SG",
+          "SF"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -968,11 +994,11 @@
         "trade_value": 70
       },
       {
-        "player_name": "Luka Dončić",
-        "team_name": "苦命家",
+        "player_name": "Ronald Holland II",
+        "team_name": "Benig",
         "positions": [
-          "PG",
-          "SG"
+          "SF",
+          "PF"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1038,19 +1064,6 @@
         "positions": [
           "PF",
           "C"
-        ],
-        "num_positions": 2,
-        "health_status": "健康",
-        "versatility_score": 70,
-        "health_adjustment": 0,
-        "trade_value": 70
-      },
-      {
-        "player_name": "Kevin Porter Jr.",
-        "team_name": "苦命家",
-        "positions": [
-          "PG",
-          "SG"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1189,11 +1202,11 @@
         "trade_value": 70
       },
       {
-        "player_name": "Alex Caruso",
+        "player_name": "Royce O'Neale",
         "team_name": "Eugene's Excellent Team",
         "positions": [
-          "SG",
-          "SF"
+          "SF",
+          "PF"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1202,11 +1215,11 @@
         "trade_value": 70
       },
       {
-        "player_name": "Royce O'Neale",
-        "team_name": "Eugene's Excellent Team",
+        "player_name": "Josh Giddey",
+        "team_name": "一顆馬鈴薯",
         "positions": [
-          "SF",
-          "PF"
+          "PG",
+          "SG"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1280,11 +1293,11 @@
         "trade_value": 70
       },
       {
-        "player_name": "Josh Giddey",
+        "player_name": "Cam Whitmore",
         "team_name": "一顆馬鈴薯",
         "positions": [
-          "PG",
-          "SG"
+          "SF",
+          "PF"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1293,11 +1306,11 @@
         "trade_value": 70
       },
       {
-        "player_name": "Cam Whitmore",
+        "player_name": "Aaron Gordon",
         "team_name": "一顆馬鈴薯",
         "positions": [
-          "SF",
-          "PF"
+          "PF",
+          "C"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1346,6 +1359,19 @@
       },
       {
         "player_name": "Paolo Banchero",
+        "team_name": "夜光閃亮亮復仇鬼",
+        "positions": [
+          "PF",
+          "C"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
+        "player_name": "Kel'el Ware",
         "team_name": "夜光閃亮亮復仇鬼",
         "positions": [
           "PF",
@@ -1514,6 +1540,19 @@
         "trade_value": 70
       },
       {
+        "player_name": "Anthony Edwards",
+        "team_name": "投錯框被犯規妨礙中籃還and1",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
         "player_name": "Stephon Castle",
         "team_name": "投錯框被犯規妨礙中籃還and1",
         "positions": [
@@ -1605,19 +1644,6 @@
         "trade_value": 70
       },
       {
-        "player_name": "Cason Wallace",
-        "team_name": "投錯框被犯規妨礙中籃還and1",
-        "positions": [
-          "PG",
-          "SG"
-        ],
-        "num_positions": 2,
-        "health_status": "健康",
-        "versatility_score": 70,
-        "health_adjustment": 0,
-        "trade_value": 70
-      },
-      {
         "player_name": "Chet Holmgren",
         "team_name": "投錯框被犯規妨礙中籃還and1",
         "positions": [
@@ -1675,6 +1701,19 @@
         "positions": [
           "SF",
           "PF"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
+        "player_name": "Karl-Anthony Towns",
+        "team_name": "Derek's Nifty Team",
+        "positions": [
+          "PF",
+          "C"
         ],
         "num_positions": 2,
         "health_status": "健康",
@@ -1969,6 +2008,32 @@
         "trade_value": 70
       },
       {
+        "player_name": "Jamal Murray",
+        "team_name": "焦糖's Wonderful Team",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
+        "player_name": "Guerschon Yabusele",
+        "team_name": "焦糖's Wonderful Team",
+        "positions": [
+          "PF",
+          "C"
+        ],
+        "num_positions": 2,
+        "health_status": "健康",
+        "versatility_score": 70,
+        "health_adjustment": 0,
+        "trade_value": 70
+      },
+      {
         "player_name": "Dennis Schröder",
         "team_name": "高雄肛鐵人",
         "positions": [
@@ -2086,19 +2151,6 @@
         "trade_value": 70
       },
       {
-        "player_name": "Luguentz Dort",
-        "team_name": "高雄肛鐵人",
-        "positions": [
-          "SG",
-          "SF"
-        ],
-        "num_positions": 2,
-        "health_status": "健康",
-        "versatility_score": 70,
-        "health_adjustment": 0,
-        "trade_value": 70
-      },
-      {
         "player_name": "Al Horford",
         "team_name": "高雄肛鐵人",
         "positions": [
@@ -2148,32 +2200,6 @@
         "trade_value": 60
       },
       {
-        "player_name": "OG Anunoby",
-        "team_name": "洋基工程",
-        "positions": [
-          "SF",
-          "PF"
-        ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
-        "trade_value": 60
-      },
-      {
-        "player_name": "Jaylen Brown",
-        "team_name": "洋基工程",
-        "positions": [
-          "SG",
-          "SF"
-        ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
-        "trade_value": 60
-      },
-      {
         "player_name": "Myles Turner",
         "team_name": "洋基工程",
         "positions": [
@@ -2187,18 +2213,6 @@
       },
       {
         "player_name": "Nikola Vučević",
-        "team_name": "洋基工程",
-        "positions": [
-          "C"
-        ],
-        "num_positions": 1,
-        "health_status": "健康",
-        "versatility_score": 60,
-        "health_adjustment": 0,
-        "trade_value": 60
-      },
-      {
-        "player_name": "Yves Missi",
         "team_name": "洋基工程",
         "positions": [
           "C"
@@ -2258,10 +2272,10 @@
         "trade_value": 60
       },
       {
-        "player_name": "D'Angelo Russell",
+        "player_name": "VJ Edgecombe",
         "team_name": "Benig",
         "positions": [
-          "PG"
+          "SG"
         ],
         "num_positions": 1,
         "health_status": "健康",
@@ -2270,10 +2284,10 @@
         "trade_value": 60
       },
       {
-        "player_name": "VJ Edgecombe",
+        "player_name": "D'Angelo Russell",
         "team_name": "Benig",
         "positions": [
-          "SG"
+          "PG"
         ],
         "num_positions": 1,
         "health_status": "健康",
@@ -2294,11 +2308,11 @@
         "trade_value": 60
       },
       {
-        "player_name": "De'Andre Hunter",
-        "team_name": "Benig",
+        "player_name": "Luka Dončić",
+        "team_name": "苦命家",
         "positions": [
-          "SF",
-          "PF"
+          "PG",
+          "SG"
         ],
         "num_positions": 2,
         "health_status": "每日觀察",
@@ -2323,6 +2337,31 @@
         "team_name": "苦命家",
         "positions": [
           "C"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Kevin Porter Jr.",
+        "team_name": "苦命家",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "num_positions": 2,
+        "health_status": "每日觀察",
+        "versatility_score": 70,
+        "health_adjustment": -10,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Ace Bailey",
+        "team_name": "苦命家",
+        "positions": [
+          "SF"
         ],
         "num_positions": 1,
         "health_status": "健康",
@@ -2381,6 +2420,18 @@
         "trade_value": 60
       },
       {
+        "player_name": "Ryan Kalkbrenner",
+        "team_name": "Eugene's Excellent Team",
+        "positions": [
+          "C"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
         "player_name": "Russell Westbrook",
         "team_name": "一顆馬鈴薯",
         "positions": [
@@ -2390,20 +2441,6 @@
         "health_status": "健康",
         "versatility_score": 60,
         "health_adjustment": 0,
-        "trade_value": 60
-      },
-      {
-        "player_name": "Josh Hart",
-        "team_name": "一顆馬鈴薯",
-        "positions": [
-          "SG",
-          "SF",
-          "PF"
-        ],
-        "num_positions": 3,
-        "health_status": "受傷",
-        "versatility_score": 80,
-        "health_adjustment": -20,
         "trade_value": 60
       },
       {
@@ -2431,16 +2468,17 @@
         "trade_value": 60
       },
       {
-        "player_name": "Aaron Gordon",
+        "player_name": "Josh Hart",
         "team_name": "一顆馬鈴薯",
         "positions": [
-          "PF",
-          "C"
+          "SG",
+          "SF",
+          "PF"
         ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
+        "num_positions": 3,
+        "health_status": "受傷",
+        "versatility_score": 80,
+        "health_adjustment": -20,
         "trade_value": 60
       },
       {
@@ -2465,19 +2503,6 @@
         "health_status": "健康",
         "versatility_score": 60,
         "health_adjustment": 0,
-        "trade_value": 60
-      },
-      {
-        "player_name": "Kel'el Ware",
-        "team_name": "夜光閃亮亮復仇鬼",
-        "positions": [
-          "PF",
-          "C"
-        ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
         "trade_value": 60
       },
       {
@@ -2565,19 +2590,6 @@
         "trade_value": 60
       },
       {
-        "player_name": "Anthony Edwards",
-        "team_name": "投錯框被犯規妨礙中籃還and1",
-        "positions": [
-          "PG",
-          "SG"
-        ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
-        "trade_value": 60
-      },
-      {
         "player_name": "Tre Johnson",
         "team_name": "投錯框被犯規妨礙中籃還and1",
         "positions": [
@@ -2587,6 +2599,19 @@
         "health_status": "健康",
         "versatility_score": 60,
         "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Cason Wallace",
+        "team_name": "投錯框被犯規妨礙中籃還and1",
+        "positions": [
+          "PG",
+          "SG"
+        ],
+        "num_positions": 2,
+        "health_status": "每日觀察",
+        "versatility_score": 70,
+        "health_adjustment": -10,
         "trade_value": 60
       },
       {
@@ -2611,19 +2636,6 @@
         "health_status": "健康",
         "versatility_score": 60,
         "health_adjustment": 0,
-        "trade_value": 60
-      },
-      {
-        "player_name": "Karl-Anthony Towns",
-        "team_name": "Derek's Nifty Team",
-        "positions": [
-          "PF",
-          "C"
-        ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
         "trade_value": 60
       },
       {
@@ -2759,6 +2771,18 @@
         "trade_value": 60
       },
       {
+        "player_name": "Jalen Suggs",
+        "team_name": "Hong's Breathtaking Team",
+        "positions": [
+          "PG"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
         "player_name": "Yang Hansen",
         "team_name": "Hong's Breathtaking Team",
         "positions": [
@@ -2771,20 +2795,19 @@
         "trade_value": 60
       },
       {
-        "player_name": "Jamal Murray",
+        "player_name": "Dylan Harper",
         "team_name": "焦糖's Wonderful Team",
         "positions": [
-          "PG",
           "SG"
         ],
-        "num_positions": 2,
-        "health_status": "每日觀察",
-        "versatility_score": 70,
-        "health_adjustment": -10,
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
         "trade_value": 60
       },
       {
-        "player_name": "Stephen Curry",
+        "player_name": "Egor Dëmin",
         "team_name": "焦糖's Wonderful Team",
         "positions": [
           "PG"
@@ -2808,10 +2831,46 @@
         "trade_value": 60
       },
       {
+        "player_name": "Moussa Diabaté",
+        "team_name": "焦糖's Wonderful Team",
+        "positions": [
+          "C"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
         "player_name": "Nikola Jović",
         "team_name": "焦糖's Wonderful Team",
         "positions": [
           "PF"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Stephen Curry",
+        "team_name": "焦糖's Wonderful Team",
+        "positions": [
+          "PG"
+        ],
+        "num_positions": 1,
+        "health_status": "健康",
+        "versatility_score": 60,
+        "health_adjustment": 0,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Nikola Jokić",
+        "team_name": "高雄肛鐵人",
+        "positions": [
+          "C"
         ],
         "num_positions": 1,
         "health_status": "健康",
@@ -2832,6 +2891,44 @@
         "trade_value": 60
       },
       {
+        "player_name": "Luguentz Dort",
+        "team_name": "高雄肛鐵人",
+        "positions": [
+          "SG",
+          "SF"
+        ],
+        "num_positions": 2,
+        "health_status": "每日觀察",
+        "versatility_score": 70,
+        "health_adjustment": -10,
+        "trade_value": 60
+      },
+      {
+        "player_name": "Yves Missi",
+        "team_name": "洋基工程",
+        "positions": [
+          "C"
+        ],
+        "num_positions": 1,
+        "health_status": "每日觀察",
+        "versatility_score": 60,
+        "health_adjustment": -10,
+        "trade_value": 50
+      },
+      {
+        "player_name": "De'Andre Hunter",
+        "team_name": "Benig",
+        "positions": [
+          "SF",
+          "PF"
+        ],
+        "num_positions": 2,
+        "health_status": "受傷",
+        "versatility_score": 70,
+        "health_adjustment": -20,
+        "trade_value": 50
+      },
+      {
         "player_name": "Jaden Ivey",
         "team_name": "Benig",
         "positions": [
@@ -2842,18 +2939,6 @@
         "health_status": "受傷",
         "versatility_score": 70,
         "health_adjustment": -20,
-        "trade_value": 50
-      },
-      {
-        "player_name": "Ace Bailey",
-        "team_name": "苦命家",
-        "positions": [
-          "SF"
-        ],
-        "num_positions": 1,
-        "health_status": "每日觀察",
-        "versatility_score": 60,
-        "health_adjustment": -10,
         "trade_value": 50
       },
       {
@@ -2872,6 +2957,19 @@
       {
         "player_name": "Moses Moody",
         "team_name": "苦命家",
+        "positions": [
+          "SG",
+          "SF"
+        ],
+        "num_positions": 2,
+        "health_status": "受傷",
+        "versatility_score": 70,
+        "health_adjustment": -20,
+        "trade_value": 50
+      },
+      {
+        "player_name": "Alex Caruso",
+        "team_name": "Eugene's Excellent Team",
         "positions": [
           "SG",
           "SF"
@@ -2948,18 +3046,6 @@
         "trade_value": 50
       },
       {
-        "player_name": "Daniel Gafford",
-        "team_name": "默斯佛陀",
-        "positions": [
-          "C"
-        ],
-        "num_positions": 1,
-        "health_status": "每日觀察",
-        "versatility_score": 60,
-        "health_adjustment": -10,
-        "trade_value": 50
-      },
-      {
         "player_name": "Dejounte Murray",
         "team_name": "投錯框被犯規妨礙中籃還and1",
         "positions": [
@@ -3012,31 +3098,6 @@
         "trade_value": 50
       },
       {
-        "player_name": "Jalen Suggs",
-        "team_name": "Hong's Breathtaking Team",
-        "positions": [
-          "PG"
-        ],
-        "num_positions": 1,
-        "health_status": "每日觀察",
-        "versatility_score": 60,
-        "health_adjustment": -10,
-        "trade_value": 50
-      },
-      {
-        "player_name": "De'Aaron Fox",
-        "team_name": "焦糖's Wonderful Team",
-        "positions": [
-          "PG",
-          "SG"
-        ],
-        "num_positions": 2,
-        "health_status": "受傷",
-        "versatility_score": 70,
-        "health_adjustment": -20,
-        "trade_value": 50
-      },
-      {
         "player_name": "Bilal Coulibaly",
         "team_name": "焦糖's Wonderful Team",
         "positions": [
@@ -3050,15 +3111,16 @@
         "trade_value": 50
       },
       {
-        "player_name": "Nikola Jokić",
-        "team_name": "高雄肛鐵人",
+        "player_name": "De'Aaron Fox",
+        "team_name": "焦糖's Wonderful Team",
         "positions": [
-          "C"
+          "PG",
+          "SG"
         ],
-        "num_positions": 1,
-        "health_status": "每日觀察",
-        "versatility_score": 60,
-        "health_adjustment": -10,
+        "num_positions": 2,
+        "health_status": "受傷",
+        "versatility_score": 70,
+        "health_adjustment": -20,
         "trade_value": 50
       },
       {
@@ -3078,6 +3140,18 @@
         "team_name": "夜光閃亮亮復仇鬼",
         "positions": [
           "SG"
+        ],
+        "num_positions": 1,
+        "health_status": "受傷",
+        "versatility_score": 60,
+        "health_adjustment": -20,
+        "trade_value": 40
+      },
+      {
+        "player_name": "Daniel Gafford",
+        "team_name": "默斯佛陀",
+        "positions": [
+          "C"
         ],
         "num_positions": 1,
         "health_status": "受傷",

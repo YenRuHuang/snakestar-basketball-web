@@ -2345,7 +2345,7 @@
           "SF",
           "PF"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "NYK"
       },
       {
@@ -2365,7 +2365,7 @@
           "SG",
           "SF"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "BOS"
       },
       {
@@ -2402,7 +2402,7 @@
         "positions": [
           "C"
         ],
-        "status": "",
+        "status": "GTD",
         "team": "NOP"
       },
       {
@@ -2515,15 +2515,6 @@
         "team": "WAS"
       },
       {
-        "player_id": 5433,
-        "name": "D'Angelo Russell",
-        "positions": [
-          "PG"
-        ],
-        "status": "",
-        "team": "DAL"
-      },
-      {
         "player_id": 10454,
         "name": "VJ Edgecombe",
         "positions": [
@@ -2531,6 +2522,15 @@
         ],
         "status": "",
         "team": "PHI"
+      },
+      {
+        "player_id": 5433,
+        "name": "D'Angelo Russell",
+        "positions": [
+          "PG"
+        ],
+        "status": "",
+        "team": "DAL"
       },
       {
         "player_id": 5903,
@@ -2542,16 +2542,6 @@
         "team": "SAS"
       },
       {
-        "player_id": 6166,
-        "name": "De'Andre Hunter",
-        "positions": [
-          "SF",
-          "PF"
-        ],
-        "status": "GTD",
-        "team": "CLE"
-      },
-      {
         "player_id": 6704,
         "name": "Ochai Agbaji",
         "positions": [
@@ -2560,6 +2550,26 @@
         ],
         "status": "",
         "team": "TOR"
+      },
+      {
+        "player_id": 10263,
+        "name": "Ronald Holland II",
+        "positions": [
+          "SF",
+          "PF"
+        ],
+        "status": "",
+        "team": "DET"
+      },
+      {
+        "player_id": 6166,
+        "name": "De'Andre Hunter",
+        "positions": [
+          "SF",
+          "PF"
+        ],
+        "status": "INJ",
+        "team": "CLE"
       },
       {
         "player_id": 6695,
@@ -2580,7 +2590,7 @@
           "PG",
           "SG"
         ],
-        "status": "",
+        "status": "GTD",
         "team": "LAL"
       },
       {
@@ -2658,7 +2668,7 @@
           "PG",
           "SG"
         ],
-        "status": "",
+        "status": "GTD",
         "team": "MIL"
       },
       {
@@ -2677,7 +2687,7 @@
         "positions": [
           "SF"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "UTA"
       },
       {
@@ -2833,16 +2843,6 @@
         "team": "ATL"
       },
       {
-        "player_id": 5754,
-        "name": "Alex Caruso",
-        "positions": [
-          "SG",
-          "SF"
-        ],
-        "status": "",
-        "team": "OKC"
-      },
-      {
         "player_id": 5163,
         "name": "Steven Adams",
         "positions": [
@@ -2860,6 +2860,25 @@
         ],
         "status": "",
         "team": "PHX"
+      },
+      {
+        "player_id": 10476,
+        "name": "Ryan Kalkbrenner",
+        "positions": [
+          "C"
+        ],
+        "status": "",
+        "team": "CHA"
+      },
+      {
+        "player_id": 5754,
+        "name": "Alex Caruso",
+        "positions": [
+          "SG",
+          "SF"
+        ],
+        "status": "INJ",
+        "team": "OKC"
       },
       {
         "player_id": 6169,
@@ -2988,7 +3007,7 @@
           "PF",
           "C"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "DEN"
       },
       {
@@ -3078,7 +3097,7 @@
           "PF",
           "C"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "MIA"
       },
       {
@@ -3301,7 +3320,7 @@
         "positions": [
           "C"
         ],
-        "status": "GTD",
+        "status": "O",
         "team": "DAL"
       }
     ],
@@ -3313,7 +3332,7 @@
           "PG",
           "SG"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "MIN"
       },
       {
@@ -3411,7 +3430,7 @@
           "PG",
           "SG"
         ],
-        "status": "",
+        "status": "GTD",
         "team": "OKC"
       },
       {
@@ -3511,7 +3530,7 @@
           "PF",
           "C"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "NYK"
       },
       {
@@ -3969,7 +3988,7 @@
           "PG",
           "SG"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "DEN"
       },
       {
@@ -4097,7 +4116,7 @@
         "positions": [
           "C"
         ],
-        "status": "GTD",
+        "status": "",
         "team": "DEN"
       },
       {
@@ -4146,7 +4165,7 @@
           "SG",
           "SF"
         ],
-        "status": "",
+        "status": "GTD",
         "team": "OKC"
       },
       {
@@ -4161,5 +4180,5 @@
       }
     ]
   },
-  "last_updated": "2025-10-23 00:05:52"
+  "last_updated": "2025-10-23 12:32:20"
 }
